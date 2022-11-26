@@ -1,18 +1,17 @@
-body {
-    margin: 0;
-    padding: 0;
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-canvas {
+#overlay, .overlay {
     position: absolute;
+    top: 0;
+    left: 0;
 }
 
-video {
-    width: 720px;
-    height: 560px;
+#detectBtn{
+    cursor: pointer;
 }
+
+div.intro{
+    text-align: center;
+    font-size: 5em;
+    font-family: monospace
+}
+
+
