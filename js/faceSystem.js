@@ -32,11 +32,14 @@ $(document).ready(function(){
         document.querySelector('body').appendChild(canvas);
         document.querySelector('body').appendChild(button);
 
-        faceDescriptions = faceapi.resizeResults(faceDescriptions, img);
-        faceapi.draw.drawDetections(canvas, faceDescriptions);
-        faceapi.draw.drawFaceLandmarks(canvas, faceDescriptions);
-        faceapi.draw.drawFaceExpressions(canvas, faceDescriptions);
+        setTimeout(()=>{
 
+            faceDescriptions = faceapi.resizeResults(faceDescriptions, img);
+            faceapi.draw.drawDetections(canvas, faceDescriptions);
+            faceapi.draw.drawFaceLandmarks(canvas, faceDescriptions);
+            faceapi.draw.drawFaceExpressions(canvas, faceDescriptions);
+
+        }, 1000);
         
         const labels = ['ross', 'rachel', 'chandler', 'monica', 'phoebe', 'kanye', 'joey'];
 
