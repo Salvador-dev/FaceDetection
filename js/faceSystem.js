@@ -6,7 +6,7 @@ $(document).ready(function(){
     const intro = document.querySelector('.intro');
 
 
-    img.setAttribute("src","images/kanye2.jpg");
+    img.setAttribute("src","images/kanye1.jpg");
     img.setAttribute("width","800");
 
     canvas.setAttribute("id","reflay");
