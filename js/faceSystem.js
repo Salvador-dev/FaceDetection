@@ -6,7 +6,7 @@ $(document).ready(function(){
     const intro = document.querySelector('.intro');
 
 
-    img.setAttribute("src","images/kanye1.jpg");
+    img.setAttribute("src","images/kanye3.jpg");
     img.setAttribute("width","800");
 
     canvas.setAttribute("id","reflay");
@@ -18,13 +18,14 @@ $(document).ready(function(){
     async function face(){
         
         const MODEL_URL = './models';
-
-        await faceapi.loadSsdMobilenetv1Model(MODEL_URL);
+    
+        await faceapi.loadSsdMobilenetv1Model(MODEL_URL); 
         await faceapi.loadFaceLandmarkModel(MODEL_URL);
         await faceapi.loadFaceRecognitionModel(MODEL_URL);
         await faceapi.loadFaceExpressionModel(MODEL_URL);
 
         let faceDescriptions = await faceapi.detectAllFaces(img).withFaceLandmarks().withFaceDescriptors().withFaceExpressions();
+
         faceapi.matchDimensions(canvas, img);
 
         document.querySelector('body').removeChild(intro);
@@ -41,7 +42,7 @@ $(document).ready(function(){
 
         }, 1000);
         
-        const labels = ['ross', 'rachel', 'chandler', 'monica', 'phoebe', 'kanye', 'joey'];
+        const labels = ['ross', 'rachel', 'chandler', 'monica', 'phoebe', 'kanye', 'joey', 'salvador'];
 
         const labeledFaceDescriptors = await Promise.all(
 
